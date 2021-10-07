@@ -1,0 +1,185 @@
+WERATEDOGS
+ANALYSIS AND
+INSIGHT
+S
+ANALYSIS QUESTIONS
+
+When I am done with wrangling the 3 files and merged them in the finale 
+DataFrame
+I asked myself what do I want 
+to know from this data and what came to my mind as follows:
+1.
+What is
+the
+most
+used
+name
+for
+dogs
+in
+this
+period?
+2.
+Is there
+a
+relation
+between favorite
+count
+and
+retweet
+count?
+3.
+What is
+the
+most
+favorited
+breed per year?
+4.
+What is
+the
+most
+used
+source
+over
+the
+period
+to
+direct
+any
+future
+
+-
+
+5.
+How many
+tweets
+per
+day
+get a high rating.
+WHAT IS THE MOST USED NAME
+I am using Tableau within this project and to answer this question I created a word cloud and it turns out that the top 3 
+
+are
+male names and for female name the top 2 are Sadie and 
+lucy
+.
+WHAT IS THE MOST USED NAME
+IS THERE A RELATION BETWEEN FAVORITE COUNT AND RETWEET 
+COUNT
+
+For this part I did create
+a
+viz on tableau that show a good relation between both also I have added some elements 
+and the description of this viz is as follows:
+1.
+Average of Favorite Count vs. average of Retweet Count. Color shows details about Dog Stage. Size shows details about Source.
+Th
+e marks are labeled by Breed 
+and Dog Stage. The view is filtered on Breed and Exclusions (
+Breed,Dog
+Stage,Source
+). The Breed filter keeps 81 of 78 members. The Exclusions (
+Breed,Dog
+Stage,Source
+) filter keeps 188 members.
+2.
+Also:
+Rows:
+Avg. Retweet Count
+Columns:
+Avg. Favorite Count
+Filters:
+Breed, Exclusions (
+Breed,Dog
+Stage,Source
+)
+Text:
+Breed and Dog Stage
+Color:
+Dog Stage
+Size:
+Source
+IS THERE A RELATION BETWEEN FAVORITE COUNT AND RETWEET 
+COUNT
+WHAT IS THE MOST FAVORITED BREED PER YEAR?
+WHAT IS THE MOST FAVORITED BREED PER YEAR?
+
+Count of Favorite Count for each Breed broken down by Timestamp Year. Color shows count of Favorite Count. The data is filter
+ed 
+on 
+Timestamp Year, which ranges from 2015 to 2017
+1.
+For 2015 it is chihuahua with 35 records 
+2.
+For 2016
+it
+is
+golden
+retriever
+with
+78
+records
+3.
+For 2017 it is golden retriever with 31 records
+Its
+seems
+that
+retrievers
+are
+the
+most
+like
+d
+breed
+
+them
+
+
+Rows:
+Breed
+Sorted descending by count of Favorite Count within Breed, broken down by 2015.
+Columns:
+Year of Timestamp, Count of Favorite Count
+Filters:
+Year of Timestamp
+Color:
+Count of Favorite Count
+WHAT IS THE MOST USED SOURCE OVER THE PERIOD TO DIRECT ANY 
+
+-
+
+
+For this one I used a simple 
+pyplot
+function to get the frequency using a histogram:
+
+And it
+seems
+twitter
+for
+iphone
+got
+it
+all
+also I noticed that there is no twitter deck for 2017 but not showing in this 
+viz.
+HOW MANY TWEETS PER DAY GET A HIGH RATING.
+
+It will be useful to know how many tweets getting  a high rating per day and check those 
+urls
+to know why they have a 
+higher rating and other not but for clarity I did the viz by quarter/month. And the average about
+10.58
+.
+HOW MANY TWEETS PER DAY GET A HIGH RATING.
+
+Rating Numerator for each Timestamp Month broken down by Timestamp Year and Timestamp Quarter. The data is 
+filtered on maximum of Breed, which excludes None.
+Rows:
+Rating Numerator
+Columns:
+Year of Timestamp, Quarter of Timestamp, Month of Timestamp
+Filters:
+Max. Breed
+Level of detail:
+Count of Tweet Id
