@@ -30,7 +30,16 @@ df = input_pdf[0].df.loc[2:38, :]
 
 
 # getting a copy of the DataFrame to do operations on it, so when i need to revert back i just run the previous cell
-wesp_2019 = df.copy()
+wesp_2020 = df.copy()
+
+
+# making the first row is the columns names
+wesp_2020.columns = wesp_2020.iloc[0]
+#reseting the index of the dataframe
+wesp_2020.reset_index(drop=True)
+# dropping the first row as it is now columns and has no meanning in the dataframe
+wesp_2020 = wesp_2020.iloc[1:,:]
+wesp_2020
 
 
 # getting the second dataframe from the second table
@@ -39,17 +48,23 @@ input_pdf[1].df
 
 # loading the second table into DataFrame
 df2 = input_pdf[1].df.loc[2:36, :]
-df2
 
 
 # getting a copy of the second DataFrame df2
 gwog_2020 = df2.copy()
 
 
+# making the first row is the columns names 
+gwog_2020.columns = gwog_2020.iloc[0]
+# reseting the index of the dataframe to be able to drop the duplicated first row 
+gwog_2020.reset_index(drop=True)
+# dropping the first raw as it has no meaning in dataframe now
+gwog_2020 = gwog_2020.iloc[1:,:]
+gwog_2020
 
 
-
-
+# assessing data
+wesp_2019.info()
 
 
 
